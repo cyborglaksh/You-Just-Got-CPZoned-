@@ -1,0 +1,73 @@
+,tag,number
+0,Array,893
+1,String,449
+2,Hash Table,323
+3,Dynamic Programming,318
+4,Math,307
+5,Depth-First Search,225
+6,Sorting,198
+7,Greedy,188
+8,Breadth-First Search,180
+9,Tree,177
+10,Database,168
+11,Binary Tree,150
+12,Binary Search,143
+13,Matrix,139
+14,Two Pointers,133
+15,Bit Manipulation,114
+16,Stack,109
+17,Design,97
+18,Heap (Priority Queue),92
+19,Backtracking,78
+20,Graph,73
+21,Simulation,65
+22,Sliding Window,60
+23,Prefix Sum,59
+24,Linked List,58
+25,Union Find,53
+26,Counting,50
+27,Recursion,40
+28,Binary Search Tree,39
+29,Trie,37
+30,Monotonic Stack,34
+31,Divide and Conquer,34
+32,Ordered Set,31
+33,Queue,29
+34,Bitmask,26
+35,Memoization,26
+36,Geometry,24
+37,Game Theory,20
+38,Segment Tree,19
+39,Interactive,18
+40,Topological Sort,18
+41,Hash Function,17
+42,String Matching,15
+43,Enumeration,14
+44,Data Stream,14
+45,Binary Indexed Tree,13
+46,Randomized,12
+47,Rolling Hash,11
+48,Shortest Path,10
+49,Combinatorics,10
+50,Iterator,9
+51,Concurrency,9
+52,Monotonic Queue,8
+53,Brainteaser,8
+54,Probability and Statistics,7
+55,Number Theory,7
+56,Doubly-Linked List,7
+57,Merge Sort,7
+58,Bucket Sort,6
+59,Minimum Spanning Tree,5
+60,Counting Sort,5
+61,Quickselect,5
+62,Shell,4
+63,Line Sweep,4
+64,Reservoir Sampling,4
+65,Suffix Array,3
+66,Strongly Connected Component,2
+67,Eulerian Circuit,2
+68,Radix Sort,2
+69,Rejection Sampling,2
+70,Biconnected Component,1
+71,Ordered Map,1
