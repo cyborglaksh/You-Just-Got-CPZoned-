@@ -1,35 +1,66 @@
-
-import requests
-from bs4 import BeautifulSoup
-from openpyxl.workbook import Workbook
-
+from styleframe import StyleFrame
+from typing import Text
+import test
 import pandas as pd
-
-url = 'https://leetcode.com/problemset/all/'
-
-r = requests.get(url)
-
-soup = BeautifulSoup(r.text,'html.parser')
-
-tag_list = []
-
-tag_summary = soup.find_all('a', { 'class': 'inline-flex items-center'})
-
-#print(tag_summary)
+from openpyxl.workbook import Workbook
+from webdriver_manager.driver import Driver
+import sys
 
 
-for tagitem in tag_summary:
-  taginfo = {
-  'tag': tagitem.find_all('span')[0].text,
-  'number' : int(tagitem.find_all('span')[1].text)
-  }
-  tag_list.append(taginfo)
+
+def ConvertProblemDoc(tag):
+  tag = tag.replace(" ","-")
+  url = f'https://leetcode.com/tag/{tag}/'
+  test.driver.get(url)
+  test.time.sleep(5)
+  content = test.driver.page_source.encode('utf-8').strip()
+
+  soup = test.BeautifulSoup(content,'html.parser')
+
+  q = soup.find('tbody',{'class':'reactable-data'}).find_all('tr')
+
+  test.driver.quit()
+
+
+  question_list = []
+
+  for element in q:
+    link = "https://leetcode.com" + element.find('td',{'label':'Title'}).find('a')['href']
+    question_attr = {
+    'Problem Link' : '=HYPERLINK("{}", "{}")'.format(link, link),
+    'Problem Title' : element.find('td',{'label':'Title'}).find('a').text,
+    'Acceptance' : element.find('td',{'label':'Acceptance'}).text,
+    'Difficulty' : element.find('td',{'label':'Difficulty'}).text,
+    }
+    question_list.append(question_attr)
+
+  df = pd.DataFrame(question_list)
+  
+  
   
   
 
+  df.to_excel(f"ProblemSet__{tag}.xlsx")
 
-df = pd.DataFrame(tag_list)
-df.to_csv('tagList.csv')
+  
+
+
+
+  
+
+
+
+argument = ""
+
+length = len(sys.argv)
+
+for i in range(1,length):
+  argument += sys.argv[i]
+  if i!=length-1:
+    argument += " "
+
+
+ConvertProblemDoc(argument)
 
 
 
