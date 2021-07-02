@@ -18,7 +18,7 @@ Windows, Linux and Mac OS X
     Run the command python webscraper.py tagname
     We can find the desired tagname under the **tagList.csv** file 
     
-  - Checkout the video for better understanding link : " " 
+  - Checkout the link for better understanding : " https://youtu.be/b1_dTJpJCBg " 
 
 Advantages:
     
