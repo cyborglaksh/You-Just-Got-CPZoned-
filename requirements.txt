@@ -85,7 +85,7 @@ soupsieve==2.2.1
 statsmodels==0.12.2
 tensorboard==2.4.0
 tensorboard-plugin-wit==1.7.0
-tensorflow==2.4.2
+tensorflow==2.5.1
 tensorflow-estimator==2.4.0
 tensorflow-gpu==2.4.2
 termcolor==1.1.0
