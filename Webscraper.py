@@ -6,8 +6,6 @@ from openpyxl.workbook import Workbook
 from webdriver_manager.driver import Driver
 import sys
 
-
-
 def ConvertProblemDoc(tag):
   tag = tag.replace(" ","-")
   url = f'https://leetcode.com/tag/{tag}/'
@@ -35,20 +33,7 @@ def ConvertProblemDoc(tag):
     question_list.append(question_attr)
 
   df = pd.DataFrame(question_list)
-  
-  
-  
-  
-
   df.to_excel(f"ProblemSet__{tag}.xlsx")
-
-  
-
-
-
-  
-
-
 
 argument = ""
 
@@ -61,15 +46,3 @@ for i in range(1,length):
 
 
 ConvertProblemDoc(argument)
-
-
-
-
-
-
-
-
-
-
-
-
